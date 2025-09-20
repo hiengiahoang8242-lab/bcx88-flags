@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.overlay {
+  position: relative;
+  text-align: center;
+  color: white;
+  top: 10%;
+}
+
+.neon-text {
+  font-size: 4em;
+  color: #0ff;
+  text-align: center;
+  text-transform: uppercase;
+  animation: neon-glow 1.5s ease-in-out infinite alternate;
+  margin-bottom: 40px;
+}
+
+@keyframes neon-glow {
+  from {
+    text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff, 0 0 20px #00c0ff, 0 0 40px #0090ff;
+  }
+  to {
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00e0ff, 0 0 30px #00b0ff, 0 0 60px #0080ff;
+  }
+}
+
+.flags {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 410px;
+  gap: 80px;
+}
+
+.flag a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flag img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.flag img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+}
+
+.flag p {
+  margin-top: 10px;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #fff;
+}
